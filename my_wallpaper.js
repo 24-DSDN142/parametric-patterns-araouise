@@ -1,5 +1,5 @@
 //your parameter variables go here!
-let eyeSize = 20;
+let eyeSize = 30;
 
 
 function setup_wallpaper(pWallpaper) {
@@ -14,12 +14,12 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(191, 197, 217); //light honeydew green colour
+  background(191, 197, 217); //light blue colour
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
   //function draw() {
-    stroke(128, 172, 242);
+    stroke(128, 172, 242); //blue
     strokeWeight(3)
     
     //ears
