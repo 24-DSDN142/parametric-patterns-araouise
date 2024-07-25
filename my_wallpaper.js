@@ -1,5 +1,5 @@
 //your parameter variables go here!
-let eyeSize = 20;
+let eyeSize = 30;
 
 
 function setup_wallpaper(pWallpaper) {
