@@ -1,8 +1,9 @@
 //your parameter variables go here!
 let toeSize = 11 //11
 let toeY = 170 //170
-let eyeballX = 80 //80 (ranging from 76 to 83 )
+let eyeballX = 80 //80 (ranges from 76 to 83 )
 let eyeballHeight = 15 //15
+let bowtieSize = 10 //10
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -56,7 +57,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
     drawToes(73, toeY);
     drawToes(83, toeY);
-    
+
+    drawBowtie(100, 93);
+  
 }
 
 function drawEars(x,y){
@@ -162,3 +165,13 @@ function drawNose(x,y){
   fill(214, 161, 181)
   triangle(95, 50, 100, 55, 105, 50);
 }
+
+function drawBowtie(x,y){
+  strokeWeight(1);
+  fill(196, 33, 33);
+  triangle(80, 105, 80, 80, 100, 93);
+  triangle(120, 105, 120, 80, 100, 93);
+  fill(0);
+  ellipse(100, 93, bowtieSize, bowtieSize + 5);
+}
+
