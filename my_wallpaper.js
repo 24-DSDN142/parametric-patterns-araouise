@@ -1,6 +1,6 @@
 //your parameter variables go here!
 let toeSize = 11 //11
-let toeY = 170 //170
+let toeY = 190 //190
 let eyeballX = 83 //80 (ranges from 76 to 83 )
 let eyeballHeight = 15 //15
 let bowtieSize = 10 //10
@@ -45,7 +45,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     drawEyeballs(eyeballX, 35);
     drawEyeballs(eyeballX + 40, 35);
 
-    if(eyeballHeight < 15){
+    if(eyeballHeight < 15){ //faint blush
       fill(252, 204, 204);
       ellipse(80, 50, 15, 15);
       ellipse(120, 50, 15, 15);
@@ -116,10 +116,10 @@ function drawEyes(x, y){
 function drawLegs(x,y) {
   strokeWeight(1)
 
-  line(70, 140, 70, 170);//left leg
-  line(95, 140, 95, 170);
-  line(105, 140, 105, 170);//right leg
-  line(130, 140, 130, 170);
+  line(70, 140, 70, toeY);//left leg
+  line(95, 140, 95, toeY);
+  line(105, 140, 105, toeY);//right leg
+  line(130, 140, 130, toeY);
 }
 
 function drawMouth(x,y){
@@ -157,9 +157,9 @@ function drawBody(x,y){
 fill(240, 237, 238);
 strokeWeight(1);
   beginShape();
-  vertex(40, 170);
+  vertex(40, toeY);
   //quadraticVertex(50, 1, 165, 35);
-  bezierVertex(75, 5, 140, 60, 160, 170);
+  bezierVertex(75, 5, 140, 60, 160, toeY);
   endShape(CLOSE);
 }
 
