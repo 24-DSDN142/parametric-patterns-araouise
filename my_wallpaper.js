@@ -2,8 +2,8 @@
 let toeSize = 11 //11
 let toeY = 190 //190
 let eyeballX = 80 //80 (ranges from 76 to 83 )
-let eyeballHeight = 17 //15
-let bowtieSize = 10 //10
+let eyeballHeight = 15 //15
+let bowtieSize = 5 //10
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
