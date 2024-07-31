@@ -1,7 +1,7 @@
 //your parameter variables go here!
 let toeSize = 11 //11
 let toeY = 170 //170
-let eyeballX = 80 //80 (ranges from 76 to 83 )
+let eyeballX = 83 //80 (ranges from 76 to 83 )
 let eyeballHeight = 15 //15
 let bowtieSize = 10 //10
 
@@ -23,7 +23,7 @@ function wallpaper_background() {
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
  
     stroke(0);
-    strokeWeight(1);
+    strokeWeight(0);
     angleMode(DEGREES);
     
     drawEars(60, 45);
@@ -45,6 +45,13 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     drawEyeballs(eyeballX, 35);
     drawEyeballs(eyeballX + 40, 35);
 
+    if(eyeballHeight < 15){
+      fill(252, 204, 204);
+      ellipse(80, 50, 15, 15);
+      ellipse(120, 50, 15, 15);
+      
+    }
+
     drawEyes(80, 35);
     drawEyes(120, 35);
   
@@ -64,6 +71,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 function drawEars(x,y){
   fill(240, 237, 238);
+  strokeWeight(1);
 beginShape(); //left ear
       vertex(60, 45);
       vertex(53, 10);
