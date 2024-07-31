@@ -1,5 +1,7 @@
 //your parameter variables go here!
-
+let toeSize = 11
+let toeY = 170
+let eyeballX = 80 //80
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -22,85 +24,42 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     strokeWeight(1);
     angleMode(DEGREES);
     
-drawEars(60, 45);
-drawEars(140, 45);
+    drawEars(60, 45);
+    drawEars(140, 45);
+
+    drawInnerEarpart(65, 43);
+    drawInnerEarpart(135, 43);
+
+    
+    drawTail(140, 170);
+    
+    drawBody(40, 170);
+    
+    drawHead(100, 50);
+    //ellipse(100, 50, 80, 80); 
+    
+    drawNose(95, 50);
+    
+    drawEyeballs(eyeballX, 35);
+    drawEyeballs(eyeballX + 40, 35);
+
+    drawEyes(80, 35);
+    drawEyes(120, 35);
   
-    //beginShape(); //left ear
-      //vertex(60, 45);
-      //vertex(53, 10);
-      //vertex(85, 13);
-    //endShape(CLOSE);
-    
-    //beginShape(); //right ear
-      //vertex(140, 45);
-      //vertex(116, 14);
-      //vertex(150, 11);
-    //endShape(CLOSE);
-    
-    //tail
-    strokeCap(ROUND);
-    beginShape();
-    vertex(140, 170);
-    bezierVertex(165, 3, 180, 100, 150, 170);
-    endShape(CLOSE);
-    
-    //body
-    beginShape();
-    vertex(40, 170);
-    //quadraticVertex(50, 1, 165, 35);
-    bezierVertex(75, 5, 140, 60, 160, 170);
-    endShape(CLOSE);
-    
-    //head
-    ellipse(100, 50, 80, 80); 
-    
-    //nose
-    triangle(95, 50, 100, 55, 105, 50);
-    
-    //eye
-    ellipse(80, 35, 20, 15);
-    ellipse(120, 35, 20, 15);
-    
-    //eyeballs
-    //ellipse(80, 35, 12, 15);
-    //ellipse(120, 35, 12, 15);
-  drawEyeballs (80, 35);
-  drawEyeballs (120, 35);
-    //middle of the eye
-    //line(80, 34, 80, 36);
-    //line(120, 34, 120, 36);
-    
-    //mouth
-    arc(95, 50, 15, 25, 60, 120);
-    arc(105, 50, 15, 25, 60, 120);
-    line(100, 55, 100, 60);
+    drawMouth(95, 50);
     
     drawLegs(70, 140);
     drawLegs(95, 140);
     drawLegs(105, 130);
     drawLegs(130, 140);
-    //legs
-    //line(70, 140, 70, 170);
-    //line(95, 140, 95, 170);
-    //line(105, 140, 105, 170);
-    //line(130, 140, 130, 170);
-    
-    //toes
-    let toeSize = 11
-    let toeY = 170
-    
-    arc(73, toeY, toeSize, toeSize, 180, 0); //far left toebean
-    arc(83, toeY, toeSize, toeSize, 180, 0);
-    arc(93, toeY, toeSize, toeSize, 180, 0);
-    
-    arc(107, toeY, toeSize, toeSize, 180, 0);
-    arc(117, toeY, toeSize, toeSize, 180, 0);
-    arc(127, toeY, toeSize, toeSize, 180, 0); //far right toebean
+
+    drawToes(73, toeY);
+    drawToes(83, toeY);
     
 }
 
 function drawEars(x,y){
-  fill(255);
+  fill(240, 237, 238);
 beginShape(); //left ear
       vertex(60, 45);
       vertex(53, 10);
@@ -114,17 +73,91 @@ beginShape(); //left ear
     endShape(CLOSE);
 }
 
+function drawInnerEarpart(x,y){
+  strokeWeight(0);
+  fill(214, 161, 181);
+  beginShape();
+  vertex(65, 43);
+  vertex(60, 16);
+  vertex(77, 17);
+  endShape(CLOSE);
+
+  beginShape()
+  vertex(135, 43);
+  vertex(110, 19);
+  vertex(143, 16);
+  endShape(CLOSE);
+}
+
 function drawEyeballs(x,y){
 fill(132, 163, 145);
 strokeWeight(0);
-ellipse(80, 35, 12, 15);
-ellipse(120, 35, 12, 15);
+ellipse(eyeballX, 35, 12, 15);
+ellipse(eyeballX + 40, 35, 12, 15);
 }
-
+function drawEyes(x, y){
+  noFill();
+  strokeWeight(1);
+  ellipse(80, 35, 20, 15);
+  ellipse(120, 35, 20, 15);
+}
 function drawLegs(x,y) {
   strokeWeight(1)
-  line(70, 140, 70, 170);
+
+  line(70, 140, 70, 170);//left leg
   line(95, 140, 95, 170);
-  line(105, 140, 105, 170);
+  line(105, 140, 105, 170);//right leg
   line(130, 140, 130, 170);
+}
+
+function drawMouth(x,y){
+  noFill();
+  strokeWeight(1);
+  arc(95, 50, 15, 25, 60, 120);
+  arc(105, 50, 15, 25, 60, 120);
+  line(100, 55, 100, 60);
+}
+
+function drawToes(x,y){
+  strokeWeight(1);
+  fill(240, 237, 238);
+  arc(73, toeY, toeSize, toeSize, 180, 0); //far left toebean
+  arc(83, toeY, toeSize, toeSize, 180, 0);
+  arc(93, toeY, toeSize, toeSize, 180, 0);
+    
+  arc(107, toeY, toeSize, toeSize, 180, 0);
+  arc(117, toeY, toeSize, toeSize, 180, 0);
+  arc(127, toeY, toeSize, toeSize, 180, 0); //far right toebean
+
+}
+
+function drawTail(x,y){
+  strokeWeight(1);
+  fill (240, 237, 238)
+  strokeCap(ROUND);
+    beginShape();
+    vertex(140, 170);
+    bezierVertex(165, 3, 180, 100, 150, 170);
+    endShape(CLOSE);
+}
+
+function drawBody(x,y){
+fill(240, 237, 238);
+strokeWeight(1);
+  beginShape();
+  vertex(40, 170);
+  //quadraticVertex(50, 1, 165, 35);
+  bezierVertex(75, 5, 140, 60, 160, 170);
+  endShape(CLOSE);
+}
+
+function drawHead(x,y){
+  strokeWeight(1);
+  fill(240, 237, 238);
+  ellipse(100, 50, 80, 80); 
+}
+function drawNose(x,y){
+  strokeWeight(1)
+  fill(214, 161, 181)
+  triangle(95, 50, 100, 55, 105, 50);
 }
