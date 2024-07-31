@@ -1,7 +1,8 @@
 //your parameter variables go here!
-let toeSize = 11
-let toeY = 170
-let eyeballX = 80 //80
+let toeSize = 11 //11
+let toeY = 170 //170
+let eyeballX = 80 //80 (ranging from 76 to 83 )
+let eyeballHeight = 15 //15
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -19,7 +20,7 @@ function wallpaper_background() {
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  //function draw() {
+ 
     stroke(0);
     strokeWeight(1);
     angleMode(DEGREES);
@@ -36,7 +37,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     drawBody(40, 170);
     
     drawHead(100, 50);
-    //ellipse(100, 50, 80, 80); 
+    
     
     drawNose(95, 50);
     
@@ -92,14 +93,14 @@ function drawInnerEarpart(x,y){
 function drawEyeballs(x,y){
 fill(132, 163, 145);
 strokeWeight(0);
-ellipse(eyeballX, 35, 12, 15);
-ellipse(eyeballX + 40, 35, 12, 15);
+ellipse(eyeballX, 35, 12, eyeballHeight);
+ellipse(eyeballX + 40, 35, 12, eyeballHeight);
 }
 function drawEyes(x, y){
   noFill();
   strokeWeight(1);
-  ellipse(80, 35, 20, 15);
-  ellipse(120, 35, 20, 15);
+  ellipse(80, 35, 20, eyeballHeight);
+  ellipse(120, 35, 20, eyeballHeight);
 }
 function drawLegs(x,y) {
   strokeWeight(1)
@@ -136,8 +137,8 @@ function drawTail(x,y){
   fill (240, 237, 238)
   strokeCap(ROUND);
     beginShape();
-    vertex(140, 170);
-    bezierVertex(165, 3, 180, 100, 150, 170);
+    vertex(130, 170);
+    bezierVertex(150, 3, 200, 100, 150, 170);
     endShape(CLOSE);
 }
 
