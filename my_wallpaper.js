@@ -1,8 +1,8 @@
 //your parameter variables go here!
 let toeSize = 11 //11
 let toeY = 190 //190
-let eyeballX = 83 //80 (ranges from 76 to 83 )
-let eyeballHeight = 15 //15
+let eyeballX = 80 //80 (ranges from 76 to 83 )
+let eyeballHeight = 17 //15
 let bowtieSize = 10 //10
 
 function setup_wallpaper(pWallpaper) {
@@ -148,8 +148,8 @@ function drawTail(x,y){
   fill (240, 237, 238)
   strokeCap(ROUND);
     beginShape();
-    vertex(130, 170);
-    bezierVertex(150, 3, 200, 100, 150, 170);
+    vertex(130, toeY);
+    bezierVertex(150, 3, 200, 100, 150, toeY);
     endShape(CLOSE);
 }
 
