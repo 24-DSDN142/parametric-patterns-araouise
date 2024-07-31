@@ -22,17 +22,20 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     strokeWeight(1);
     angleMode(DEGREES);
     
-    beginShape(); //left ear
-      vertex(60, 45);
-      vertex(53, 10);
-      vertex(85, 13);
-    endShape(CLOSE);
+drawEars(60, 45);
+drawEars(140, 45);
+  
+    //beginShape(); //left ear
+      //vertex(60, 45);
+      //vertex(53, 10);
+      //vertex(85, 13);
+    //endShape(CLOSE);
     
-    beginShape(); //right ear
-      vertex(140, 45);
-      vertex(116, 14);
-      vertex(150, 11);
-    endShape(CLOSE);
+    //beginShape(); //right ear
+      //vertex(140, 45);
+      //vertex(116, 14);
+      //vertex(150, 11);
+    //endShape(CLOSE);
     
     //tail
     strokeCap(ROUND);
@@ -59,9 +62,10 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     ellipse(120, 35, 20, 15);
     
     //eyeballs
-    ellipse(80, 35, 12, 15);
-    ellipse(120, 35, 12, 15);
-    
+    //ellipse(80, 35, 12, 15);
+    //ellipse(120, 35, 12, 15);
+  drawEyeballs (80, 35);
+  drawEyeballs (120, 35);
     //middle of the eye
     //line(80, 34, 80, 36);
     //line(120, 34, 120, 36);
@@ -71,11 +75,15 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     arc(105, 50, 15, 25, 60, 120);
     line(100, 55, 100, 60);
     
+    drawLegs(70, 140);
+    drawLegs(95, 140);
+    drawLegs(105, 130);
+    drawLegs(130, 140);
     //legs
-    line(70, 140, 70, 170);
-    line(95, 140, 95, 170);
-    line(105, 140, 105, 170);
-    line(130, 140, 130, 170);
+    //line(70, 140, 70, 170);
+    //line(95, 140, 95, 170);
+    //line(105, 140, 105, 170);
+    //line(130, 140, 130, 170);
     
     //toes
     let toeSize = 11
@@ -91,3 +99,32 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     
 }
 
+function drawEars(x,y){
+  fill(255);
+beginShape(); //left ear
+      vertex(60, 45);
+      vertex(53, 10);
+      vertex(85, 13);
+    endShape(CLOSE);
+    
+    beginShape(); //right ear
+      vertex(140, 45);
+      vertex(116, 14);
+      vertex(150, 11);
+    endShape(CLOSE);
+}
+
+function drawEyeballs(x,y){
+fill(132, 163, 145);
+strokeWeight(0);
+ellipse(80, 35, 12, 15);
+ellipse(120, 35, 12, 15);
+}
+
+function drawLegs(x,y) {
+  strokeWeight(1)
+  line(70, 140, 70, 170);
+  line(95, 140, 95, 170);
+  line(105, 140, 105, 170);
+  line(130, 140, 130, 170);
+}
