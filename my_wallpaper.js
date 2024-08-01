@@ -5,8 +5,9 @@ let eyeballX = 80 //80 (ranges from 76 to 83 ) This function operates width of t
 let eyeballHeight = 15 //15 This function operates eyeball height.
 let bowtieSize = 5 //5 This function operates bowtie Size.
 
-let drawFish = 2 //options: 1, 2, or 3. This function operates fish options.  
-
+let drawFish = 2 //options: 0, 1, 2, or 3. This function operates fish options.
+let eyeColour = 0 // options: 0 or 1. This function operates left eye colour.   
+let chairBG = 0 //options: 0 or 1. This function operates chair.
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -20,7 +21,7 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(105, 181, 164); //light blue colour
+  background(105, 181, 164); //teal green colour
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
@@ -29,26 +30,15 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     strokeWeight(1);
     angleMode(DEGREES);
 
-  if (drawFish > 1){
-
- strokeWeight(1);
- fill(201, 153, 113);
-
-  
-triangle(35, 40, 25, 55, 45, 55);
-ellipse(35, 30, 15, 30);
-line(33, 25, 37, 20);
-line(37, 25, 33, 20);
-
-triangle(185, 160, 175, 145, 195, 145);
-ellipse(185, 170, 15, 30);
-line(187, 180, 183, 175);
-line(183, 180, 187, 175);
-
-  
+    if(chairBG >= 1){
+    ellipse(105, 100, 190, 190);
+    fill(115, 17, 17);
+    ellipse(105, 100, 185, 185); 
+    fill(84, 13, 13);
+    ellipse(105, 100, 175, 175);
   }
-  
     
+
     drawEars(60, 45);
     drawEars(140, 45);
 
@@ -77,8 +67,58 @@ line(183, 180, 187, 175);
 
     drawEyes(80, 35);
     drawEyes(120, 35);
-  
+
+  if (eyeColour >= 1){
+    fill(71, 54, 39)
+    ellipse(eyeballX, 35, 12, eyeballHeight);
+  }
+
     drawMouth(95, 50);
+
+
+  if (drawFish == 1){
+
+ strokeWeight(1);
+ fill(201, 153, 113);
+
+  
+triangle(35, 40, 25, 55, 45, 55);
+ellipse(35, 30, 15, 30);
+line(33, 25, 37, 20);
+line(37, 25, 33, 20);
+
+triangle(185, 160, 175, 145, 195, 145);
+ellipse(185, 170, 15, 30);
+line(187, 180, 183, 175);
+line(183, 180, 187, 175);
+
+  
+  }
+  
+  else if (drawFish == 2){
+    fill(183, 201, 113);
+
+  
+triangle(35, 40, 25, 55, 45, 55);
+ellipse(35, 30, 15, 30);
+line(33, 25, 37, 20);
+line(37, 25, 33, 20);
+
+triangle(185, 160, 175, 145, 195, 145);
+ellipse(185, 170, 15, 30);
+line(187, 180, 183, 175);
+line(183, 180, 187, 175);
+  
+}
+
+else if(drawFish == 3){
+ fill(99, 112, 143);
+  triangle(103, 67, 112, 59, 112, 75);
+  ellipse(94, 67, 25, 10);
+  line(90, 68, 87, 65);
+  line(87, 68, 90, 65);
+
+}
     
     drawLegs(70, 140);
     drawLegs(95, 140);
@@ -88,7 +128,9 @@ line(183, 180, 187, 175);
     drawToes(73, toeY);
     drawToes(83, toeY);
 
-    drawBowtie(100, 93);
+    drawBowtie(100,93);
+
+    
   
 }
 
@@ -206,4 +248,3 @@ function drawBowtie(x,y){
   fill(0);
   ellipse(100, 93, bowtieSize, bowtieSize + 5);
 }
-
