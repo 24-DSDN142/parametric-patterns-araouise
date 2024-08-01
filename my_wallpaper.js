@@ -2,12 +2,15 @@
 let toeSize = 11 //11
 let toeY = 190 //190
 let eyeballX = 80 //80 (ranges from 76 to 83 )
-let eyeballHeight = 19 //15
+let eyeballHeight = 15 //15
 let bowtieSize = 5 //5
 
+let drawFish = 2 //fishes 
+
+
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -17,14 +20,53 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(191, 197, 217); //light blue colour
+  background(105, 181, 164); //light blue colour
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
  
     stroke(0);
-    strokeWeight(0);
+    strokeWeight(1);
     angleMode(DEGREES);
+
+//  let fishtailX1 = 30
+//  let fishtailX2 = 40
+//  let fishtailY1 = 15
+//  let fishtailY2 = 5
+//  let fishtailY3 = 25
+ // let fishX = 20
+ // let fishY = 15
+ // let fishWidth = 30
+ // let fishHeight = 15
+ // let fishEyeX1 = 10
+ // let fishEyeX2 = 15
+ // let fishEyeY1 = 17
+ // let fishEyeY2 = 12
+    //fish
+  if (drawFish > 1){
+
+ strokeWeight(1);
+ fill(201, 153, 113);
+
+  
+//triangle(20, 30, 15, 40, 25, 40);
+  ellipse(35, 30, 15, 30);
+  //line(fishEyeX1, fishEyeY1, fishEyeX2, fishEyeY2)
+  //line(fishEyeX1, fishEyeY2, fishEyeX2, fishEyeY1)
+
+ //triangle(fishtailX1, fishtailY1+30, fishtailX2, fishtailY2+30, fishtailX2, fishtailY3+30);
+ ellipse(180, 170, 15, 30);
+  //line(fishEyeX1, fishEyeY1+30, fishEyeX2, fishEyeY2+30)
+  //line(fishEyeX1, fishEyeY2+30, fishEyeX2, fishEyeY1+30)
+
+  //triangle(fishtailX1, fishtailY+60, fishtailX2, fishtailY2+60, fishtailX2, fishtailY3+60);
+  //ellipse(fishX, fishY+60,fishWidth, fishHeight);
+  //line(fishEyeX1, fishEyeY1+60, fishEyeX2, fishEyeY2+60);
+  //line(fishEyeX1, fishEyeY2+60, fishEyeX2, fishEyeY2+60);
+
+  
+  }
+  
     
     drawEars(60, 45);
     drawEars(140, 45);
@@ -84,6 +126,7 @@ beginShape(); //left ear
       vertex(150, 11);
     endShape(CLOSE);
 }
+
 
 function drawInnerEarpart(x,y){
   strokeWeight(0);
