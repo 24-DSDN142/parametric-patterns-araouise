@@ -1,17 +1,16 @@
 //your parameter variables go here!
 let toeSize = 11 //11 This function operates toe size.
-let toeY = 190 //190 This function operates cat length.
+let toeY = 200 //190 This function operates cat length.
 let eyeballX = 80 //80 (ranges from 76 to 83 ) This function operates width of the eyes.
-let eyeballHeight = 15 //15 This function operates eyeball height.
-let bowtieSize = 5 //5 This function operates bowtie Size.
-
-let drawFish = 2 //options: 0, 1, 2, or 3. This function operates fish options.
-let eyeColour = 0 // options: 0 or 1. This function operates left eye colour.   
-let chairBG = 0 //options: 0 or 1. This function operates chair.
+let eyeballHeight = 7//15 This function operates eyeball height.
+let bowtieSize = 13 //5 This function operates bowtie Size.
+let drawFish =  3 //options: 0, 1, 2, or 3. This function operates fish options.
+let eyeColour = true //This function operates left eye colour.   
+let chairBG = true //This function operates chair.
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
-  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -30,12 +29,12 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     strokeWeight(1);
     angleMode(DEGREES);
 
-    if(chairBG >= 1){
-    ellipse(105, 100, 190, 190);
+    if(chairBG == false){
+    ellipse(103, 100, 190, 190);
     fill(115, 17, 17);
-    ellipse(105, 100, 185, 185); 
+    ellipse(103, 100, 185, 185); 
     fill(84, 13, 13);
-    ellipse(105, 100, 175, 175);
+    ellipse(103, 100, 175, 175);
   }
     
 
@@ -68,7 +67,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     drawEyes(80, 35);
     drawEyes(120, 35);
 
-  if (eyeColour >= 1){
+  if (eyeColour == false){
     fill(71, 54, 39)
     ellipse(eyeballX, 35, 12, eyeballHeight);
   }
