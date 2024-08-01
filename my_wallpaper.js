@@ -9,7 +9,7 @@ let drawFish = 2 //fishes
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.resolution(NINE_LANDSCAPE);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
@@ -49,12 +49,13 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
  fill(201, 153, 113);
 
   
-//triangle(20, 30, 15, 40, 25, 40);
+  triangle(35, 40, 25, 55, 45, 55);
   ellipse(35, 30, 15, 30);
   //line(fishEyeX1, fishEyeY1, fishEyeX2, fishEyeY2)
   //line(fishEyeX1, fishEyeY2, fishEyeX2, fishEyeY1)
 
  //triangle(fishtailX1, fishtailY1+30, fishtailX2, fishtailY2+30, fishtailX2, fishtailY3+30);
+ triangle(180, 160, 170, 145, 190, 145);
  ellipse(180, 170, 15, 30);
   //line(fishEyeX1, fishEyeY1+30, fishEyeX2, fishEyeY2+30)
   //line(fishEyeX1, fishEyeY2+30, fishEyeX2, fishEyeY1+30)
