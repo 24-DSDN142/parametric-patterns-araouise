@@ -29,7 +29,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     strokeWeight(1);
     angleMode(DEGREES);
 
-    if(chairBG == false){
+    if(chairBG == false){ // ball chair by Eero Aarnio.
     ellipse(103, 100, 190, 190);
     fill(115, 17, 17);
     ellipse(103, 100, 185, 185); 
@@ -67,7 +67,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     drawEyes(80, 35);
     drawEyes(120, 35);
 
-  if (eyeColour == false){
+  if (eyeColour == false){ //heterochromia eye colour
     fill(71, 54, 39)
     ellipse(eyeballX, 35, 12, eyeballHeight);
   }
@@ -75,7 +75,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     drawMouth(95, 50);
 
 
-  if (drawFish == 1){
+  if (drawFish == 1){ // draws the fish.
 
  strokeWeight(1);
  fill(201, 153, 113);
@@ -94,7 +94,7 @@ line(183, 180, 187, 175);
   
   }
   
-  else if (drawFish == 2){
+  else if (drawFish == 2){ 
     fill(183, 201, 113);
 
   
@@ -153,13 +153,13 @@ beginShape(); //left ear
 function drawInnerEarpart(x,y){
   strokeWeight(0);
   fill(214, 161, 181);
-  beginShape();
+  beginShape(); //left ear
   vertex(65, 43);
   vertex(60, 16);
   vertex(77, 17);
   endShape(CLOSE);
 
-  beginShape()
+  beginShape() //right ear
   vertex(135, 43);
   vertex(110, 19);
   vertex(143, 16);
@@ -223,7 +223,6 @@ fill(240, 237, 238);
 strokeWeight(1);
   beginShape();
   vertex(40, toeY);
-  //quadraticVertex(50, 1, 165, 35);
   bezierVertex(75, 5, 140, 60, 160, toeY);
   endShape(CLOSE);
 }
