@@ -1,16 +1,16 @@
 //your parameter variables go here!
 let toeSize = 11 //11 This function operates toe size.
-let toeY = 200 //190 This function operates cat length.
+let toeY = 150 //190 This function operates cat length.
 let eyeballX = 80 //80 (ranges from 76 to 83 ) This function operates width of the eyes.
-let eyeballHeight = 7//15 This function operates eyeball height.
-let bowtieSize = 13 //5 This function operates bowtie Size.
+let eyeballHeight = 30 //15 This function operates eyeball height.
+let bowtieSize = 5 //5 This function operates bowtie Size.
 let drawFish =  3 //options: 0, 1, 2, or 3. This function operates fish options.
-let eyeColour = true //This function operates left eye colour.   
+let eyeColour = false //This function operates left eye colour.   
 let chairBG = true //This function operates chair.
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GLIDE_WALLPAPER);
-  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.resolution(A3);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
