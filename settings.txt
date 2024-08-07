@@ -10,22 +10,23 @@ Your final settings.txt will look something like this when you are finished:
 Wallpaper 1:
 
 //your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
+let toeSize = 11 //11 This function operates toe size.
+let toeY = 190 //190 This function operates cat length.
+let eyeballX = 76 //80 (ranges from 76 to 83 ) This function operates width of the eyes.
+let eyeballHeight = 20 //15 This function operates eyeball height.
+let bowtieSize = 5 //5 This function operates bowtie Size.
+let drawFish =  1 //options: 0, 1, 2, or 3. This function operates fish options.
+let eyeColour = true //This function operates left eye colour.   
+let chairBG = true //This function operates chair.
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.cell_width  = 300;
+  pWallpaper.grid_settings.cell_height = 300;
   pWallpaper.grid_settings.row_offset  = 50;
 }
 
@@ -34,21 +35,197 @@ function setup_wallpaper(pWallpaper) {
 Wallpaper 2:
 
 //your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
+let toeSize = 11 //11 This function operates toe size.
+let toeY = 190 //190 This function operates cat length.
+let eyeballX = 83 //80 (ranges from 76 to 83 ) This function operates width of the eyes.
+let eyeballHeight = 9 //15 This function operates eyeball height.
+let bowtieSize = 5 //5 This function operates bowtie Size.
+let drawFish =  2 //options: 0, 1, 2, or 3. This function operates fish options.
+let eyeColour = true //This function operates left eye colour.   
+let chairBG = true //This function operates chair.
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 0;
+  pWallpaper.grid_settings.cell_width  = 300;
+  pWallpaper.grid_settings.cell_height = 300;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+/////////////////////////////////
+
+Wallpaper 3:
+
+//your parameter variables go here!
+let toeSize = 11 //11 This function operates toe size.
+let toeY = 190 //190 This function operates cat length.
+let eyeballX = 80 //80 (ranges from 76 to 83 ) This function operates width of the eyes.
+let eyeballHeight = 4 //15 This function operates eyeball height.
+let bowtieSize = 5 //5 This function operates bowtie Size.
+let drawFish =  3 //options: 0, 1, 2, or 3. This function operates fish options.
+let eyeColour = true //This function operates left eye colour.   
+let chairBG = true //This function operates chair.
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 300;
+  pWallpaper.grid_settings.cell_height = 300;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+/////////////////////////////////
+
+Wallpaper 4:
+
+//your parameter variables go here!
+let toeSize = 11 //11 This function operates toe size.
+let toeY = 150 //190 This function operates cat length.
+let eyeballX = 80 //80 (ranges from 76 to 83 ) This function operates width of the eyes.
+let eyeballHeight = 30 //15 This function operates eyeball height.
+let bowtieSize = 5 //5 This function operates bowtie Size.
+let drawFish =  3 //options: 0, 1, 2, or 3. This function operates fish options.
+let eyeColour = false //This function operates left eye colour.   
+let chairBG = true //This function operates chair.
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+/////////////////////////////////
+
+Wallpaper 5:
+
+//your parameter variables go here!
+let toeSize = 11 //11 This function operates toe size.
+let toeY = 170 //190 This function operates cat length.
+let eyeballX = 77 //80 (ranges from 76 to 83 ) This function operates width of the eyes.
+let eyeballHeight = 6 //15 This function operates eyeball height.
+let bowtieSize = 5 //5 This function operates bowtie Size.
+let drawFish =  0 //options: 0, 1, 2, or 3. This function operates fish options.
+let eyeColour = true //This function operates left eye colour.   
+let chairBG = false //This function operates chair.
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 300;
+  pWallpaper.grid_settings.cell_height = 300;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+/////////////////////////////////
+
+Wallpaper 6:
+
+//your parameter variables go here!
+let toeSize = 11 //11 This function operates toe size.
+let toeY = 170 //190 This function operates cat length.
+let eyeballX = 83 //80 (ranges from 76 to 83 ) This function operates width of the eyes.
+let eyeballHeight = 40 //15 This function operates eyeball height.
+let bowtieSize = 13 //5 This function operates bowtie Size.
+let drawFish =  0 //options: 0, 1, 2, or 3. This function operates fish options.
+let eyeColour = false //This function operates left eye colour.   
+let chairBG = true //This function operates chair.
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+/////////////////////////////////
+
+Wallpaper 7:
+
+//your parameter variables go here!
+let toeSize = 11 //11 This function operates toe size.
+let toeY = 170 //190 This function operates cat length.
+let eyeballX = 83 //80 (ranges from 76 to 83 ) This function operates width of the eyes.
+let eyeballHeight = 1 //15 This function operates eyeball height.
+let bowtieSize = 13 //5 This function operates bowtie Size.
+let drawFish =  0 //options: 0, 1, 2, or 3. This function operates fish options.
+let eyeColour = false //This function operates left eye colour.   
+let chairBG = false //This function operates chair.
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 300;
+  pWallpaper.grid_settings.cell_height = 300;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+/////////////////////////////////
+
+Wallpaper 8:
+
+//your parameter variables go here!
+let toeSize = 11 //11 This function operates toe size.
+let toeY = 170 //190 This function operates cat length.
+let eyeballX = 83 //80 (ranges from 76 to 83 ) This function operates width of the eyes.
+let eyeballHeight = 17//15 This function operates eyeball height.
+let bowtieSize = 13 //5 This function operates bowtie Size.
+let drawFish =  2 //options: 0, 1, 2, or 3. This function operates fish options.
+let eyeColour = true //This function operates left eye colour.   
+let chairBG = false //This function operates chair.
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+/////////////////////////////////
+
+Wallpaper 9:
+
+//your parameter variables go here!
+let toeSize = 11 //11 This function operates toe size.
+let toeY = 200 //190 This function operates cat length.
+let eyeballX = 80 //80 (ranges from 76 to 83 ) This function operates width of the eyes.
+let eyeballHeight = 1 //15 This function operates eyeball height.
+let bowtieSize = 13 //5 This function operates bowtie Size.
+let drawFish =  3 //options: 0, 1, 2, or 3. This function operates fish options.
+let eyeColour = true //This function operates left eye colour.   
+let chairBG = true //This function operates chair.
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 50;
 }
